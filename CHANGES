@@ -1,0 +1,9 @@
+Changelog for Catmandu-PICA
+
+0.02 2013-09-08T14:18:55
+ - migrated to Dist::Zilla [Jakob Voss]
+ - delete Makefile.old [Johann Rolschewski]
+
+0.01 2013-06-04T16:01:00
+ - First version. BETA now than later. [Johann Rolschewski]
+

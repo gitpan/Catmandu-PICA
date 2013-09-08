@@ -1,0 +1,12 @@
+CHANGES
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README
+cpanfile
+dist.ini
+lib/Catmandu/Fix/pica_map.pm
+lib/Catmandu/Importer/PICA.pm
+lib/Catmandu/PICA.pm
+t/00-load.t
