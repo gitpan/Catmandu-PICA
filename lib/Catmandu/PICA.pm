@@ -1,6 +1,6 @@
 package Catmandu::PICA;
 # ABSTRACT: Catmandu modules for working with PICA+ XML data.
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 use Carp        qw< carp croak confess cluck >;
 use XML::LibXML::Reader;
@@ -87,7 +87,7 @@ Catmandu::PICA - Catmandu modules for working with PICA+ XML data.
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -148,7 +148,7 @@ Jakob Voß <voss@gbv.de>
 
 =head1 AUTHOR
 
-Johann Rolschewski
+Johann Rolschewski <rolschewski@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

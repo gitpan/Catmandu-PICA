@@ -1,6 +1,17 @@
 Changelog for Catmandu-PICA
 
-0.02 2013-09-08T14:18:55
+0.03 2013-09-15T18:23:16
+ - release version 0.03 [Jakob Voss]
+ - added some test data and more tests [Johann Rolschewski]
+ - added PICA+ parser [Johann Rolschewski]
+
+0.02 2013-09-15T15:02:55
+ - added email address to AUTHOR [Johann Rolschewski]
+ - Merge branch 'master' into devel [Jakob Voss]
+ - migrated to Dist::Zilla [Jakob Voss]
+ - nice to have [Jakob Voss]
+ - allow given/when in Perl >= 5.18 [Jakob Voss]
+ - allow given/when in Perl >= 5.18 [Jakob Voss]
  - migrated to Dist::Zilla [Jakob Voss]
  - delete Makefile.old [Johann Rolschewski]
 

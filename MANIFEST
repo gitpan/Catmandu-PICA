@@ -9,4 +9,10 @@ dist.ini
 lib/Catmandu/Fix/pica_map.pm
 lib/Catmandu/Importer/PICA.pm
 lib/Catmandu/PICA.pm
+lib/Catmandu/PICAplus.pm
 t/00-load.t
+t/01-parser.t
+t/02-importer.t
+t/03-fix.t
+t/picaplus.dat
+t/picaxml.xml

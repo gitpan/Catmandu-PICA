@@ -1,12 +1,12 @@
 ---
 abstract: 'Catmandu modules for working with PICA+ XML data.'
 author:
-  - 'Johann Rolschewski'
+  - 'Johann Rolschewski <rolschewski@gmail.com>'
 build_requires: {}
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300037, CPAN::Meta::Converter version 2.132140'
+generated_by: 'Dist::Zilla version 4.300038, CPAN::Meta::Converter version 2.131560'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -19,4 +19,4 @@ resources:
   bugtracker: https://github.com/gbv/Catmandu-PICA/issues
   homepage: https://github.com/gbv/Catmandu-PICA
   repository: https://github.com/gbv/Catmandu-PICA.git
-version: 0.02
+version: 0.03
