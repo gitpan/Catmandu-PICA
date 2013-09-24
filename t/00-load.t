@@ -1,12 +1,10 @@
-#!perl -T
+use strict;
+use Test::More;
 
-use Test::More tests => 4;
-
-BEGIN {
-    use_ok( 'Catmandu::PICA' ) || print "Bail out!\n";
-    use_ok( 'Catmandu::PICAplus' ) || print "Bail out!\n";
-    use_ok( 'Catmandu::Importer::PICA' ) || print "Bail out!\n";
-    use_ok( 'Catmandu::Fix::pica_map' ) || print "Bail out!\n";
+foreach ( map { s{^lib/|\.pm\n$}{}g; s{/}{::}g; $_ } `find lib -iname *.pm` ) {
+    use_ok $_;
 }
 
-diag( "Testing Catmandu::PICA $Catmandu::PICA::VERSION, Perl $], $^X" );
+diag "Testing Catmandu::PICA $Catmandu::PICA::VERSION, Perl $], $^X";
+
+done_testing;

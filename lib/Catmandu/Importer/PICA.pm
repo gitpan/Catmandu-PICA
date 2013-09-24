@@ -1,61 +1,46 @@
 package Catmandu::Importer::PICA;
-
-# ABSTRACT: Package that imports PICA+ data
-our $VERSION = '0.03'; # VERSION
+#ABSTRACT: Package that imports PICA+ data
+our $VERSION = '0.04'; #VERSION
 
 use Catmandu::Sane;
-use Catmandu::PICA;
-use Catmandu::PICAplus;
+use PICA::Parser::XML;
+use PICA::Parser::Plus;
+use PICA::Parser::Plain;
 use Moo;
-
-no if $] >= 5.018, 'warnings', "experimental::smartmatch";
 
 with 'Catmandu::Importer';
 
-has type => ( is => 'ro', default => sub {'XML'} );
+has type   => ( is => 'ro', default => sub { 'xml' } );
+has parser => ( is => 'lazy' );
 
-sub pica_generator {
-    my $self = shift;
+sub _build_parser {
+    my ($self) = @_;
 
-    my $file;
+    my $type = lc $self->type;
 
-    given ( $self->type ) {
-        when ('XML') {
-            $file = Catmandu::PICA->new( $self->fh );
-        }
-        when ('PICAplus') {
-            $file = Catmandu::PICAplus->new( $self->fh );
-        }
-        die "unknown";
+    if ( $type =~ /^(pica)?plus$/ ) {
+        PICA::Parser::Plus->new(  $self->fh );
+    } elsif ( $type eq 'plain') {
+        PICA::Parser::Plain->new( $self->fh );
+    } elsif ( $type eq 'xml') {
+        PICA::Parser::XML->new( $self->fh );
+    } else {
+        die "unknown type: $type";
     }
-
-    sub {
-        my $record = $file->next();
-        return unless $record;
-        return $record;
-    };
 }
 
 sub generator {
     my ($self) = @_;
-    my $type = $self->type;
 
-    given ($type) {
-        when ('XML') {
-            return $self->pica_generator;
-        }
-        when ('PICAplus') {
-            return $self->pica_generator;
-        }
-        die "need PICA+ data as input";
-    }
+    sub {
+        return $self->parser->next();
+    };
 }
 
 
 1;    # End of Catmandu::Importer::PICA
 
 __END__
-
 =pod
 
 =head1 NAME
@@ -64,7 +49,7 @@ Catmandu::Importer::PICA - Package that imports PICA+ data
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -86,15 +71,11 @@ Parse PICA XML to native Perl hash containing two keys: '_id' and 'record'.
                   [
                     '001@',
                     '',
-                    '_',
-                    '',
                     '0',
                     '703'
                   ],
                   [
                     '001A',
-                    '',
-                    '_',
                     '',
                     '0',
                     '2045:10-03-11'
@@ -102,8 +83,6 @@ Parse PICA XML to native Perl hash containing two keys: '_id' and 'record'.
                   [
                     '028B',
                     '01',
-                    '_',
-                    '',
                     'd',
                     'Thomas',
                     'a',
@@ -145,3 +124,4 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+

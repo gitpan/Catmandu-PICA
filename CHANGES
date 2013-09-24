@@ -1,13 +1,32 @@
 Changelog for Catmandu-PICA
 
-0.03 2013-09-15T18:23:16
+0.04 2013-09-24T10:09:52
+ - use xml as default import and export type [Jakob Voss]
+ - added Plain PICA parser [Jakob Voss]
+ - removed regex modifier [Johann Rolschewski]
+ - Simplify internal PICA format [Johann Rolschewski]
+ - Simplify internal PICA format
+   
+   and drop of record leader because usage is unclear [Johann Rolschewski]
+ - implemented draft of PICA XML writer [Jakob Voss]
+ - implemented basic PICA exporter (no XML yet) [Jakob Voss]
+ - first draft of PICA writer [Jakob Voss]
+ - deleted leader from some records [Johann Rolschewski]
+ - added check for leader [Johann Rolschewski]
+ - Renamed modules
+   
+   The core parser modules have no dependencies to Catmandu modules, so
+   they don't have to be in the Catmandu:: namespace. Catmandu::PICA should
+   be an empty module that only combines all modules needed to work with
+   PICA data within the Catmandu framework. [Jakob Voss]
+
+0.03 2013-09-15T18:23:02
  - release version 0.03 [Jakob Voss]
  - added some test data and more tests [Johann Rolschewski]
  - added PICA+ parser [Johann Rolschewski]
 
 0.02 2013-09-15T15:02:55
  - added email address to AUTHOR [Johann Rolschewski]
- - Merge branch 'master' into devel [Jakob Voss]
  - migrated to Dist::Zilla [Jakob Voss]
  - nice to have [Jakob Voss]
  - allow given/when in Perl >= 5.18 [Jakob Voss]
