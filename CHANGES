@@ -1,6 +1,11 @@
 Changelog for Catmandu-PICA
 
-0.04 2013-09-24T10:09:52
+0.05 2014-01-16T10:45:00
+ - new release [Jakob Voss]
+ - fixed test failure in 00-load.t (closes issue #5) [Jakob Voss]
+ - tests for Exporter and different PICA formats [Johann Rolschewski]
+
+0.04 2013-09-24T10:09:46
  - use xml as default import and export type [Jakob Voss]
  - added Plain PICA parser [Jakob Voss]
  - removed regex modifier [Johann Rolschewski]

@@ -1,11 +1,11 @@
 
 
 This archive contains the distribution Catmandu-PICA,
-version 0.04:
+version 0.05:
 
   Catmandu modules for working with PICA data.
 
-This software is copyright (c) 2013 by Johann Rolschewski.
+This software is copyright (c) 2014 by Johann Rolschewski.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

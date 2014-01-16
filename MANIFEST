@@ -21,6 +21,7 @@ t/00-load.t
 t/01-parser.t
 t/02-importer.t
 t/03-fix.t
+t/04-exporter.t
 t/05-writer.t
 t/files/dump.dat
 t/files/picaplus.dat

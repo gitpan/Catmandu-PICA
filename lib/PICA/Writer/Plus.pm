@@ -1,6 +1,6 @@
 package PICA::Writer::Plus;
 # ABSTRACT: Normalized PICA+ format serializer
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 use strict;
 use charnames qw(:full);
@@ -33,7 +33,10 @@ sub _write_record {
 1;
 
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -41,7 +44,7 @@ PICA::Writer::Plus - Normalized PICA+ format serializer
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 DESCRIPTION
 
@@ -73,10 +76,9 @@ Johann Rolschewski <rolschewski@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Johann Rolschewski.
+This software is copyright (c) 2014 by Johann Rolschewski.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
