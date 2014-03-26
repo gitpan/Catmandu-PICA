@@ -1,6 +1,6 @@
 package Catmandu::PICA;
 #ABSTRACT: Catmandu modules for working with PICA data.
-our $VERSION = '0.05'; #VERSION
+our $VERSION = '0.06'; #VERSION
 
 
 1; # End of Catmandu::PICA
@@ -17,13 +17,15 @@ Catmandu::PICA - Catmandu modules for working with PICA data.
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 CATMANDU MODULES
 
 =over
 
 =item * L<Catmandu::Importer::PICA>
+
+=item * L<Catmandu::Importer::SRU::Parser::picaxml>
 
 =item * L<Catmandu::Exporter::PICA>
 
@@ -66,7 +68,9 @@ You can also look for information at:
 
 =head1 CONTRIBUTORS
 
-Jakob Voß <voss@gbv.de>
+Johann Rolschewski, C<< <rolschewski at gmail.com> >>
+
+Jakob Voß C<< <voss at gbv.de> >>
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package PICA::Parser::Plain;
 #ABSTRACT: Plain PICA+ format parser
-our $VERSION = '0.05'; #VERSION
+our $VERSION = '0.06'; #VERSION
 
 use strict;
 use charnames qw(:full);
@@ -77,7 +77,7 @@ PICA::Parser::Plain - Plain PICA+ format parser
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SEEALSO
 

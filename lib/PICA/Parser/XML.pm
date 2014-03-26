@@ -1,6 +1,6 @@
 package PICA::Parser::XML;
 # ABSTRACT: PICA+ XML parser
-our $VERSION = '0.05'; # VERSION
+our $VERSION = '0.06'; # VERSION
 
 use Carp qw(croak);
 use XML::LibXML::Reader;
@@ -8,7 +8,7 @@ use XML::LibXML::Reader;
 
 sub new {
     my $class = shift;
-    my $file  = shift;
+    my $input = shift;
 
     my $self = {
         filename    => undef,
@@ -17,21 +17,26 @@ sub new {
     };
 
     # check for file or filehandle
-    my $ishandle = eval { fileno($file); };
+    my $ishandle = eval { fileno($input); };
     if ( !$@ && defined $ishandle ) {
-        my $reader = XML::LibXML::Reader->new(IO => $file)
-             or croak "cannot read from filehandle $file\n";
-        $self->{filename}   = scalar $file;
+        my $reader = XML::LibXML::Reader->new(IO => $input)
+             or croak "cannot read from filehandle $input\n";
+        $self->{filename}   = scalar $input;
         $self->{xml_reader} = $reader;
     }
-    elsif ( -e $file ) {
-        my $reader = XML::LibXML::Reader->new(location => $file)
-             or croak "cannot read from file $file\n";
-        $self->{filename}   = $file;
+    elsif ( $input =~ /^[^\n]+$/ && -e $input ) {
+        my $reader = XML::LibXML::Reader->new(location => $input)
+             or croak "cannot read from file $input\n";
+        $self->{filename}   = $input;
         $self->{xml_reader} = $reader;
-    }  
+    }
+    elsif ( defined $input && length $input > 0 ) {
+        my $reader = XML::LibXML::Reader->new( string => $input )
+            or croak "cannot read XML string $input\n";
+        $self->{xml_reader} = $reader;
+    } 
     else {
-        croak "file or filehande $file does not exists";
+        croak "file, filehande or string $input does not exists";
     }
     return ( bless $self, $class );
 }
@@ -88,7 +93,7 @@ PICA::Parser::XML - PICA+ XML parser
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -102,9 +107,27 @@ L<PICA::Parser::XML> is a parser for PICA+ XML records.
         # do something        
     }
 
-=head1 SUBROUTINES/METHODS
+=head1 Arguments
 
-=head2 new
+=over
+
+=item C<file>
+
+Path to file with PICA XML records.
+
+=item C<fh>
+
+Open filehandle for file with PICA XML records.
+
+=item C<string>
+
+XML string with PICA XML records.
+
+=back
+
+=head1 METHODS
+
+=head2 new($filename | $filehandle | $string)
 
 =head2 next()
 

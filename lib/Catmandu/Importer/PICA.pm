@@ -1,6 +1,6 @@
 package Catmandu::Importer::PICA;
 #ABSTRACT: Package that imports PICA+ data
-our $VERSION = '0.05'; #VERSION
+our $VERSION = '0.06'; #VERSION
 
 use Catmandu::Sane;
 use PICA::Parser::XML;
@@ -52,7 +52,7 @@ Catmandu::Importer::PICA - Package that imports PICA+ data
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 

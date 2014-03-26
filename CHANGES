@@ -1,6 +1,17 @@
 Changelog for Catmandu-PICA
 
-0.05 2014-01-16T10:45:00
+0.06 2014-03-26T17:13:00
+ - new version [Jakob Voss]
+ - documentation [Jakob Voss]
+ - don't try to interprete long string as filename [Jakob Voss]
+ - don't depend on Catmandu::SRU [Jakob Voss]
+ - added ABSTRACT and VERSION to POD [Johann Rolschewski]
+ - correction of SYNOPSIS in POD [Johann Rolschewski]
+ - added SRU importer [Johann Rolschewski]
+ - deleted constant LEADER_LENGTH; added more flexible check for leader
+   [Johann Rolschewski]
+
+0.05 2014-01-16T10:44:57
  - new release [Jakob Voss]
  - fixed test failure in 00-load.t (closes issue #5) [Jakob Voss]
  - tests for Exporter and different PICA formats [Johann Rolschewski]

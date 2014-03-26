@@ -1,6 +1,6 @@
 package Catmandu::Fix::pica_map;
 # ABSTRACT: copy mab values of one field to a new field
-our $VERSION = '0.05'; # VERSION
+our $VERSION = '0.06'; # VERSION
 
 use Catmandu::Sane;
 use Catmandu::Util qw(:is :data);
@@ -192,7 +192,7 @@ Catmandu::Fix::pica_map - copy mab values of one field to a new field
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
