@@ -1,5 +1,5 @@
 ---
-abstract: 'Catmandu modules for working with PICA data.'
+abstract: 'Catmandu modules for working with PICA+ data.'
 author:
   - 'Johann Rolschewski <rolschewski@gmail.com>'
 build_requires: {}
@@ -23,4 +23,4 @@ resources:
   bugtracker: https://github.com/gbv/Catmandu-PICA/issues
   homepage: https://github.com/gbv/Catmandu-PICA
   repository: https://github.com/gbv/Catmandu-PICA.git
-version: 0.06
+version: 0.07

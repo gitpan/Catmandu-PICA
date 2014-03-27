@@ -1,6 +1,6 @@
 package PICA::Writer::XML;
 #ABSTRACT: PICA+ XML format serializer
-our $VERSION = '0.06'; #VERSION
+our $VERSION = '0.07'; #VERSION
 
 use strict;
 use Moo;
@@ -61,7 +61,7 @@ PICA::Writer::XML - PICA+ XML format serializer
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 AUTHOR
 

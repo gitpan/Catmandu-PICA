@@ -1,6 +1,6 @@
 package PICA::Parser::XML;
 # ABSTRACT: PICA+ XML parser
-our $VERSION = '0.06'; # VERSION
+our $VERSION = '0.07'; # VERSION
 
 use Carp qw(croak);
 use XML::LibXML::Reader;
@@ -19,12 +19,13 @@ sub new {
     # check for file or filehandle
     my $ishandle = eval { fileno($input); };
     if ( !$@ && defined $ishandle ) {
+        binmode $input; # drop all PerlIO layers, as required by libxml2
         my $reader = XML::LibXML::Reader->new(IO => $input)
              or croak "cannot read from filehandle $input\n";
         $self->{filename}   = scalar $input;
         $self->{xml_reader} = $reader;
     }
-    elsif ( $input =~ /^[^\n]+$/ && -e $input ) {
+    elsif ( defined $input && $input !~ /\n/ && -e $input ) {
         my $reader = XML::LibXML::Reader->new(location => $input)
              or croak "cannot read from file $input\n";
         $self->{filename}   = $input;
@@ -93,7 +94,7 @@ PICA::Parser::XML - PICA+ XML parser
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 

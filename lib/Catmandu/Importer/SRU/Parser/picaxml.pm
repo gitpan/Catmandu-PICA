@@ -1,7 +1,6 @@
 package Catmandu::Importer::SRU::Parser::picaxml;
-
-# ABSTRACT: Package transforms SRU responses into Catmandu PICA
-our $VERSION = '0.06'; # VERSION
+#ABSTRACT: Parse SRU response with PICA+ data into Catmandu PICA
+our $VERSION = '0.07'; #VERSION
 
 use Moo;
 use PICA::Parser::XML;
@@ -11,9 +10,8 @@ sub parse {
 
     my $xml = $record->{recordData};
     my $parser = PICA::Parser::XML->new( $xml ); 
-    my $record_hash = $parser->next();
 
-    return $record_hash;
+    return $parser->next;
 }
 
 
@@ -27,30 +25,35 @@ __END__
 
 =head1 NAME
 
-Catmandu::Importer::SRU::Parser::picaxml - Package transforms SRU responses into Catmandu PICA
+Catmandu::Importer::SRU::Parser::picaxml - Parse SRU response with PICA+ data into Catmandu PICA
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
-my %attrs = (
-    base => 'http://sru.gbv.de/gvk',
-    query => '1940-5758',
-    recordSchema => 'picaxml' ,
-    parser => 'picaxml' ,
-);
+    my %attrs = (
+        base => 'http://sru.gbv.de/gvk',
+        query => '1940-5758',
+        recordSchema => 'picaxml' ,
+        parser => 'picaxml' ,
+    );
 
-my $importer = Catmandu::Importer::SRU->new(%attrs);
+    my $importer = Catmandu::Importer::SRU->new(%attrs);
+
+To give an example for use of the L<catmandu> command line client:
+
+    catmandu convert SRU --base http://sru.gbv.de/gvk 
+                         --query "pica.isb=0-937175-64-1" 
+                         --recordSchema picaxml 
+                         --parser picaxml 
+                     to PICA --type plain
 
 =head1 DESCRIPTION
 
-Each picaxml response will be transformed into an format as defined by L<Catmandu::Importer::PICA>
-
-=head1 AUTHOR
-
-Johann Rolschewski, C<< <rolschewski at gmail.com> >>
+Each picaxml response will be transformed into the format defined by
+L<Catmandu::Importer::PICA>
 
 =head1 AUTHOR
 

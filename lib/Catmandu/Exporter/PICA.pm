@@ -1,6 +1,6 @@
 package Catmandu::Exporter::PICA;
 #ABSTRACT: Package that exports PICA data
-our $VERSION = '0.06'; #VERSION
+our $VERSION = '0.07'; #VERSION
 
 use Catmandu::Sane;
 use PICA::Writer::Plus;
@@ -40,6 +40,7 @@ sub commit { # TODO: why is this not called automatically?
     $self->writer->end if $self->can('end');
 }
 
+
 1;
 
 __END__
@@ -54,7 +55,13 @@ Catmandu::Exporter::PICA - Package that exports PICA data
 
 =head1 VERSION
 
-version 0.06
+version 0.07
+
+=head1 CONFIGURATION
+
+In addition to the configuration provided by L<Catmandu::Exporter> the exporter
+can be configured with a C<type> parameter as described at
+L<Catmandu::Importer>.
 
 =head1 AUTHOR
 

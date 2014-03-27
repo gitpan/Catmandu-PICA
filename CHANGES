@@ -1,6 +1,11 @@
 Changelog for Catmandu-PICA
 
-0.06 2014-03-26T17:13:00
+0.07 2014-03-27T21:13:38
+ - documentation [Jakob Voss]
+ - XML parser should ignore PerlIO layers [Jakob Voss]
+ - show build status of master and devel branch [Jakob Voss]
+
+0.06 2014-03-26T17:12:53
  - new version [Jakob Voss]
  - documentation [Jakob Voss]
  - don't try to interprete long string as filename [Jakob Voss]
