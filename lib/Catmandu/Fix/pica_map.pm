@@ -1,6 +1,6 @@
 package Catmandu::Fix::pica_map;
 # ABSTRACT: copy mab values of one field to a new field
-our $VERSION = '0.07'; # VERSION
+our $VERSION = '0.08'; # VERSION
 
 use Catmandu::Sane;
 use Catmandu::Util qw(:is :data);
@@ -118,9 +118,10 @@ sub parse_pica_path {
     if ( $path =~ /(\d{3}\S)(\[(\d{2})\])?([_A-Za-z0-9]+)?(\/(\d+)(-(\d+))?)?/ ) {
         my $field    = $1;
         my $occurrence = $3;
-        my $subfield = $4 ? "[$4]" : "[_A-Za-z0-9]";
+        my $subfield = defined $4 ? "[$4]" : "[_A-Za-z0-9]";
         my $from     = $6;
         my $to       = $8;
+
         return {
             field    => $field,
             occurrence => $occurrence,
@@ -192,7 +193,7 @@ Catmandu::Fix::pica_map - copy mab values of one field to a new field
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
