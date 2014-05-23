@@ -1,6 +1,6 @@
 package Catmandu::PICA;
 #ABSTRACT: Catmandu modules for working with PICA+ data.
-our $VERSION = '0.08'; #VERSION
+our $VERSION = '0.09'; #VERSION
 
 
 1; # End of Catmandu::PICA
@@ -17,7 +17,7 @@ Catmandu::PICA - Catmandu modules for working with PICA+ data.
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 DESCRIPTION
 

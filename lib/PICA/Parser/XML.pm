@@ -1,6 +1,6 @@
 package PICA::Parser::XML;
 # ABSTRACT: PICA+ XML parser
-our $VERSION = '0.08'; # VERSION
+our $VERSION = '0.09'; # VERSION
 
 use Carp qw(croak);
 use XML::LibXML::Reader;
@@ -94,7 +94,7 @@ PICA::Parser::XML - PICA+ XML parser
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 

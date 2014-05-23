@@ -17,10 +17,10 @@ name: Catmandu-PICA
 recommends:
   Catmandu::SRU: 0.032
 requires:
-  Catmandu: 0.7
+  Catmandu: 0.9
   XML::LibXML::Reader: 2.0
 resources:
   bugtracker: https://github.com/gbv/Catmandu-PICA/issues
   homepage: https://github.com/gbv/Catmandu-PICA
   repository: https://github.com/gbv/Catmandu-PICA.git
-version: 0.08
+version: 0.09

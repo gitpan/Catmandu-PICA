@@ -1,6 +1,11 @@
 Changelog for Catmandu-PICA
 
-0.08 2014-04-04T07:38:46
+0.09 2014-05-23T09:46:06
+ - release 0.09 [Jakob Voss]
+ - Transforming Fix functions the new syntax. Require Catmandu 0.9 [Johann
+   Rolschewski]
+
+0.08 2014-04-04T07:38:42
  - new release [Jakob Voss]
  - bugfix for pica_map to handle subfield code 0 [Johann Rolschewski]
 

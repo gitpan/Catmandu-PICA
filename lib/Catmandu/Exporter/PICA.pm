@@ -1,6 +1,6 @@
 package Catmandu::Exporter::PICA;
 #ABSTRACT: Package that exports PICA data
-our $VERSION = '0.08'; #VERSION
+our $VERSION = '0.09'; #VERSION
 
 use Catmandu::Sane;
 use PICA::Writer::Plus;
@@ -55,7 +55,7 @@ Catmandu::Exporter::PICA - Package that exports PICA data
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 CONFIGURATION
 
