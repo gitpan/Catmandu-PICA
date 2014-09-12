@@ -1,6 +1,6 @@
 package PICA::Writer::Plus;
 # ABSTRACT: Normalized PICA+ format serializer
-our $VERSION = '0.10'; # VERSION
+our $VERSION = '0.11'; # VERSION
 
 use strict;
 use charnames qw(:full);
@@ -44,7 +44,7 @@ PICA::Writer::Plus - Normalized PICA+ format serializer
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 DESCRIPTION
 

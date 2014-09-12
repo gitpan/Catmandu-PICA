@@ -1,14 +1,14 @@
 package Catmandu::Fix::pica_map;
 
 # ABSTRACT: copy mab values of one field to a new field
-our $VERSION = '0.10'; # VERSION
+our $VERSION = '0.11'; # VERSION
 
 use Catmandu::Sane;
 use Carp qw(confess);
 use Moo;
 
 use Catmandu::Fix::Has;
-use Catmandu::PICA;
+use PICA::Data qw(parse_pica_path);
 
 has pica_path => ( fix_arg => 1 );
 has path      => ( fix_arg => 1 );
@@ -24,7 +24,7 @@ sub emit {
     my $join_char  = $fixer->emit_string( $self->join // '' );
     my $pica_path  = $self->pica_path;
 
-    my $parsed_path = Catmandu::PICA::parse_pica_path($pica_path) or confess "invalid pica path";
+    my $parsed_path = parse_pica_path($pica_path) or confess "invalid pica path";
     my ( $field_regex, $occurrence_regex, $subfield_regex, $from, $to ) = @$parsed_path;
 
     my $var  = $fixer->var;
@@ -111,7 +111,7 @@ Catmandu::Fix::pica_map - copy mab values of one field to a new field
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
@@ -131,6 +131,10 @@ version 0.10
     pica_map('028B[01]ad','dcterms.ccontributor', -join => ' ');
 
 =back
+
+=head1 SEE ALSO
+
+L<PICA::Data>
 
 =head1 AUTHOR
 

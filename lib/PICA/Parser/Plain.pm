@@ -1,6 +1,6 @@
 package PICA::Parser::Plain;
 #ABSTRACT: Plain PICA+ format parser
-our $VERSION = '0.10'; #VERSION
+our $VERSION = '0.11'; #VERSION
 
 use strict;
 use charnames qw(:full);
@@ -56,6 +56,7 @@ sub _decode {
 
         my @subfields = split /\$([^\$])/, $data; #substr( $data, 1 ) );
         shift @subfields;
+        push @subfields, '' if @subfields % 2;
 
         push( @record, [ $tag, $occurence, @subfields ] );
     }
@@ -77,7 +78,7 @@ PICA::Parser::Plain - Plain PICA+ format parser
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SEEALSO
 

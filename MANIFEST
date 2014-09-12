@@ -12,6 +12,7 @@ lib/Catmandu/Fix/pica_map.pm
 lib/Catmandu/Importer/PICA.pm
 lib/Catmandu/Importer/SRU/Parser/picaxml.pm
 lib/Catmandu/PICA.pm
+lib/PICA/Data.pm
 lib/PICA/Parser/Plain.pm
 lib/PICA/Parser/Plus.pm
 lib/PICA/Parser/XML.pm
@@ -26,6 +27,7 @@ t/03-fix.t
 t/04-exporter.t
 t/05-writer.t
 t/06-sru.t
+t/07-data.t
 t/bugfix_pica_map.t
 t/files/dump.dat
 t/files/picaplus.dat

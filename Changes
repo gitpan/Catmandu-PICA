@@ -1,6 +1,12 @@
 Changelog for Catmandu-PICA
 
-0.10 2014-09-11T13:04:57
+0.11 2014-09-12T11:46:35
+ - new function pica_values (Jakob Voss)
+ - move parse_pica_path to PICA::Data (Jakob Voss)
+ - fix parsing empty subfields (Jakob Voss)
+ - test with Perl 5.20 (Jakob Voss)
+
+0.10 2014-09-11T13:03:24
  - new function parse_pica_path (Jakob Voss)
  - bugfix for pica_map to check for occurrence (Johann Rolschewski)
 
