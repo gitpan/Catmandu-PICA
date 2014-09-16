@@ -1,6 +1,10 @@
 Changelog for Catmandu-PICA
 
-0.11 2014-09-12T11:46:35
+0.12 2014-09-16T10:50:24
+ - more PICA access methods (Jakob Voss)
+ - lower requirement of XML::LibXML (Jakob Voss)
+
+0.11 2014-09-12T11:46:22
  - new function pica_values (Jakob Voss)
  - move parse_pica_path to PICA::Data (Jakob Voss)
  - fix parsing empty subfields (Jakob Voss)

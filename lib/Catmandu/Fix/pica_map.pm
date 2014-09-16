@@ -1,7 +1,7 @@
 package Catmandu::Fix::pica_map;
 
 # ABSTRACT: copy mab values of one field to a new field
-our $VERSION = '0.11'; # VERSION
+our $VERSION = '0.12'; # VERSION
 
 use Catmandu::Sane;
 use Carp qw(confess);
@@ -111,7 +111,7 @@ Catmandu::Fix::pica_map - copy mab values of one field to a new field
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 
@@ -130,11 +130,9 @@ version 0.11
     # Copy from field 028A with ocurrance subfields a and d to dc.contributor hash joining them by ' '
     pica_map('028B[01]ad','dcterms.ccontributor', -join => ' ');
 
-=back
-
 =head1 SEE ALSO
 
-L<PICA::Data>
+L<PICA::Data> contains more methods for processing parsed PICA+ records
 
 =head1 AUTHOR
 
