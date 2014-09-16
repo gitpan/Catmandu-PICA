@@ -1,6 +1,6 @@
 package PICA::Writer::Handle;
 # ABSTRACT: Utility class that implements a filehandle attribute to write to
-our $VERSION = '0.12'; # VERSION
+our $VERSION = '0.13'; # VERSION
 
 use strict;
 use Moo::Role;
@@ -42,7 +42,7 @@ PICA::Writer::Handle - Utility class that implements a filehandle attribute to w
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 AUTHOR
 
