@@ -1,6 +1,9 @@
 Changelog for Catmandu-PICA
 
-0.13 2014-09-16T12:12:30
+0.14 2014-09-17T09:44:47
+ - refactoring with PICA::Path (Jakob Voss)
+
+0.13 2014-09-16T12:12:25
  - refactored (Jakob Voss)
 
 0.12 2014-09-16T10:50:18

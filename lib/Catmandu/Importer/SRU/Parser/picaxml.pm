@@ -1,6 +1,6 @@
 package Catmandu::Importer::SRU::Parser::picaxml;
 #ABSTRACT: Parse SRU response with PICA+ data into Catmandu PICA
-our $VERSION = '0.13'; #VERSION
+our $VERSION = '0.14'; #VERSION
 
 use Moo;
 use PICA::Parser::XML;
@@ -29,7 +29,7 @@ Catmandu::Importer::SRU::Parser::picaxml - Parse SRU response with PICA+ data in
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 SYNOPSIS
 
