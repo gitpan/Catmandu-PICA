@@ -1,7 +1,6 @@
 package Catmandu::Fix::pica_map;
 
-# ABSTRACT: copy mab values of one field to a new field
-our $VERSION = '0.14'; # VERSION
+our $VERSION = '0.15';
 
 use Catmandu::Sane;
 use Moo;
@@ -107,20 +106,11 @@ sub emit {
 }
 
 1;
-
 __END__
-
-=pod
-
-=encoding UTF-8
 
 =head1 NAME
 
 Catmandu::Fix::pica_map - copy mab values of one field to a new field
-
-=head1 VERSION
-
-version 0.14
 
 =head1 SYNOPSIS
 
@@ -143,16 +133,5 @@ version 0.14
 
 See L<PICA::Path> for a definition of PICA path expressions and L<PICA::Data>
 for more methods to process parsed PICA+ records.
-
-=head1 AUTHOR
-
-Johann Rolschewski <rolschewski@gmail.com>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2014 by Johann Rolschewski.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
 
 =cut

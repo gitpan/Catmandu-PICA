@@ -1,7 +1,11 @@
 Changelog for Catmandu-PICA
 
-0.14 2014-09-17T09:44:47
- - refactoring with PICA::Path (Jakob Voss)
+0.15  2014-09-19 12:08:39 CEST
+ - remove PICA::Data as independent module
+ - migrated to Dist::Milla 
+
+0.14 2014-09-18T13:24:08
+ - refactoring with PICA::Path
 
 0.13 2014-09-16T12:12:25
  - refactored (Jakob Voss)

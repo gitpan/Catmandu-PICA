@@ -1,6 +1,6 @@
 package Catmandu::Importer::SRU::Parser::picaxml;
-#ABSTRACT: Parse SRU response with PICA+ data into Catmandu PICA
-our $VERSION = '0.14'; #VERSION
+
+our $VERSION = '0.15';
 
 use Moo;
 use PICA::Parser::XML;
@@ -14,22 +14,12 @@ sub parse {
     return $parser->next;
 }
 
-
 1;
-
 __END__
-
-=pod
-
-=encoding UTF-8
 
 =head1 NAME
 
 Catmandu::Importer::SRU::Parser::picaxml - Parse SRU response with PICA+ data into Catmandu PICA
-
-=head1 VERSION
-
-version 0.14
 
 =head1 SYNOPSIS
 
@@ -54,16 +44,5 @@ To give an example for use of the L<catmandu> command line client:
 
 Each picaxml response will be transformed into the format defined by
 L<Catmandu::Importer::PICA>
-
-=head1 AUTHOR
-
-Johann Rolschewski <rolschewski@gmail.com>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2014 by Johann Rolschewski.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
 
 =cut

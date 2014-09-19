@@ -1,12 +1,12 @@
 package Catmandu::Exporter::PICA;
-#ABSTRACT: Package that exports PICA data
-our $VERSION = '0.14'; #VERSION
 
 use Catmandu::Sane;
 use PICA::Writer::Plus;
 use PICA::Writer::Plain;
 use PICA::Writer::XML;
 use Moo;
+
+our $VERSION = '0.15';
 
 with 'Catmandu::Exporter';
 
@@ -40,38 +40,17 @@ sub commit { # TODO: why is this not called automatically?
     $self->writer->end if $self->can('end');
 }
 
-
 1;
-
 __END__
-
-=pod
-
-=encoding UTF-8
 
 =head1 NAME
 
 Catmandu::Exporter::PICA - Package that exports PICA data
-
-=head1 VERSION
-
-version 0.14
 
 =head1 CONFIGURATION
 
 In addition to the configuration provided by L<Catmandu::Exporter> the exporter
 can be configured with a C<type> parameter as described at
 L<Catmandu::Importer>.
-
-=head1 AUTHOR
-
-Johann Rolschewski <rolschewski@gmail.com>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2014 by Johann Rolschewski.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
 
 =cut

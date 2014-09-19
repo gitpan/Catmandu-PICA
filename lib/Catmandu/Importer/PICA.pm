@@ -1,6 +1,6 @@
 package Catmandu::Importer::PICA;
-#ABSTRACT: Package that imports PICA+ data
-our $VERSION = '0.14'; #VERSION
+
+our $VERSION = '0.15';
 
 use Catmandu::Sane;
 use PICA::Parser::XML;
@@ -37,22 +37,12 @@ sub generator {
     };
 }
 
-
 1;
-
 __END__
-
-=pod
-
-=encoding UTF-8
 
 =head1 NAME
 
 Catmandu::Importer::PICA - Package that imports PICA+ data
-
-=head1 VERSION
-
-version 0.14
 
 =head1 SYNOPSIS
 
@@ -119,16 +109,5 @@ serialization (where C<$> is used as subfield indicator) and C<plus> or
 C<picaplus> for normalized PICA+.
 
 =back
-
-=head1 AUTHOR
-
-Johann Rolschewski <rolschewski@gmail.com>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2014 by Johann Rolschewski.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
 
 =cut
